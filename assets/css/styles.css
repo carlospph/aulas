@@ -1,0 +1,72 @@
+/* resetando elementos default */
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-grid {
+  background: rgb(247, 239, 239);
+  padding: 40px;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.container-img {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  margin: .4em;
+}
+
+.textos{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: .5em;
+  background: rgba(101, 92, 92, 0.7);
+  width: 100%;
+  border-radius: 0 0 5px 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media(min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 60% 38%;
+    grid-template-areas:
+    'cidade mar' 'cidade ilha';
+    max-width: 992px;
+    gap: 1rem;
+  }
+
+  .cidade {
+    grid-area: cidade;
+    height: 100%;
+  }
+
+  .cidade img {
+    height: 100%;
+  }
+
+  .mar {
+    grid-area: mar;
+    height: 100%;
+  }
+
+  .ilha {
+    grid-area: ilha;
+    height: 100%;
+  }
+}
